@@ -15,15 +15,17 @@ let substantivos = ["corredor", "mapache"];
 let extesiones = [".com", ".net", ".us", ".io"];
 
 for (let i = 0; i < pronombres.length; i++) {
-  // console.log(pronombres[i]);
   for (let j = 0; j < adjetivos.length; j++) {
-    // console.log(pronombre[i] + adjetivos[j]);
-    for (let l = 0; l < substantivos.length; l++) {
-      // console.log(pronombre[i] + adjetivos[j] + substantivos[l]);
-      for (let m = 0; m < extesiones.length; m++) {
-        // eslint-disable-next-line no-console
+    for (let k = 0; k < substantivos.length; k++) {
+      // Dominio con hack no puede estar dentro del bucle de extensiones para no se repitir varias veces
+      let palabra = substantivos[k];
+      let hackExtension = "." + palabra.slice(-2); // seleciona las 2 ultimas letras para la extension
+      let hackDominio =
+        pronombres[i] + adjetivos[j] + palabra.slice(0, -2) + hackExtension; //quita las 2 ultimas letras de la palabra
+      console.log(hackDominio);
+      for (let l = 0; l < extesiones.length; l++) {
         console.log(
-          pronombres[i] + adjetivos[j] + substantivos[l] + extesiones[m]
+          pronombres[i] + adjetivos[j] + substantivos[k] + extesiones[l]
         );
       }
     }
