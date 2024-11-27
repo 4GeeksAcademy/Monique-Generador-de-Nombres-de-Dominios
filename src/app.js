@@ -9,9 +9,9 @@ import "./assets/img/4geeks.ico";
 
 console.log("Generador de Nombres de Dominios");
 
-let pronombres = ["el", "nuestro"];
-let adjetivos = ["genial", "grande"];
-let substantivos = ["corredor", "mapache"];
+let pronombres = ["the", "our"];
+let adjetivos = ["great", "big"];
+let substantivos = ["jogger", "racoon"];
 let extesiones = [".com", ".net", ".us", ".io"];
 
 for (let i = 0; i < pronombres.length; i++) {
